@@ -1,0 +1,48 @@
+<h1>Books</h1>
+
+<%# 一覧  %>
+<table class="table_box">
+	<thead class="table_title">
+		<tr>
+			<th>Title</th>
+			<th>Body</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody class="table_body">
+		<% @books.each do |book| %>
+		<tr>
+			<th><%= book.title %></th>
+			<th><%= book.body %></th>
+			<th><%= link_to 'Show', book_path(book) %></th>
+			<th><%= link_to 'Edit', edit_book_path(book) %></th>
+			<th><%= link_to 'Delete', book_path(book), method: :delete %></th>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%# 投稿画面 %>
+<h2>New book</h2>
+
+<%# エラー出力 %>
+
+
+
+
+
+
+
+<%= form_for(@book) do |f| %>
+
+	<h3>Title</h3>
+	<%= f.text_field :title %>
+
+	<h3>Body</h3>
+	<%= f.text_field :body %>
+
+	<%= f.submit 'Create Book' %>
+
+<% end %>

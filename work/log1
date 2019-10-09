@@ -1,0 +1,5 @@
+vagrant@ubuntu-bionic:~/work/Bookers$ rails db:migrate RAILS_ENV=test
+2019-10-09 04:15:34 WARN Selenium [DEPRECATION] Selenium::WebDriver::Chrome#driver_path= is deprecated. Use Selenium::WebDriver::Chrome::Service#driver_path= instead.
+warning: parser/current is loading parser/ruby25, which recognizes
+warning: 2.5.7-compliant syntax, but you are running 2.5.5.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
