@@ -1,4 +1,4 @@
-<div class="Box">
+<body class="Box">
 
 	<% if flash[:notice] %>
 		<div class="success">
@@ -6,10 +6,11 @@
 		</div>
 	<% end %>
 
-	<p> <span>Title:</span> <%= @book.title %> </p>
-	<p> <span>Body:</span> <%= @book.body %> </p>
+	<p> <span class="show-head">Title:</span> <%= @book.title %> </p>
+	<p> <span class="show-head">Body:</span> <%= @book.body %> </p>
 
 	<%= link_to 'Edit', edit_book_path(@book) %>
+	<span>|</span>
 	<%= link_to 'Back', books_path %>
 
-</div>
+</body>

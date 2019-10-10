@@ -1,17 +1,18 @@
 <h1>Editing Book</h1>
 
 <%= form_for(@book) do |f| %>
-	
+
 	<%# エラー出力 %>
 	<%= render 'layouts/error_messages', model: f.object %>
 
-	<h2>Title</h2>
-	<%= f.text_field :title %>
-	<h2>Body</h2>
-	<%= f.text_field :body %>
-	<%= f.submit 'Update Book'%>
+	<label>Title</label>
+	<%= f.text_field :title, class: "edit-title" %>
+	<label>Body</label>
+	<%= f.text_area :body, class: "edit-body" %>
+	<%= f.submit 'Update Book', class: "edit-btn"%>
 
 	<%= link_to 'Show', book_path %>
+	<span>|</span>
 	<%= link_to 'Back', books_path %>
 
 <% end %>

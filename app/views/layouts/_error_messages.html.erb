@@ -1,9 +1,9 @@
 <% if model.errors.any? %>
-	<div class="alert alert-warning">
+	<div class="alert-warning">
 
-			<h3><%= pluralize(model.errors.count,"error") %> prohibited this book from being saved:</h3>
+			<h2><%= pluralize(model.errors.count,"error") %> prohibited this book from being saved:</h2>
 
-		<ul>
+		<ul class="error-list">
 			<% model.errors.full_messages.each do |msg| %>
 				<li><%= msg %></li>
 			<% end %>
