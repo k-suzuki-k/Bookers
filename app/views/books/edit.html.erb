@@ -1,6 +1,9 @@
 <h1>Editing Book</h1>
 
 <%= form_for(@book) do |f| %>
+	
+	<%# エラー出力 %>
+	<%= render 'layouts/error_messages', model: f.object %>
 
 	<h2>Title</h2>
 	<%= f.text_field :title %>

@@ -26,16 +26,10 @@
 
 <%# 投稿画面 %>
 <h2>New book</h2>
-
-<%# エラー出力 %>
-
-
-
-
-
-
-
 <%= form_for(@book) do |f| %>
+
+	<%# エラー出力 %>
+	<%= render 'layouts/error_messages', model: f.object %>
 
 	<h3>Title</h3>
 	<%= f.text_field :title %>
